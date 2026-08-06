@@ -1,16 +1,26 @@
+using FinanceTrackerLibrary.DataAccess;
+
 namespace FinanceTracker
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
-        static void Main()
+        static async Task Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            // Test database connection
+            try
+            {
+                var db = new SqlDataAccess(DataBaseConfig.ConnectionString);
+                var result = await db.LoadDataAsync<dynamic>("SELECT 1;");
+                MessageBox.Show("Database Connected Successfully!", "Success");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($" Connection Failed!\n\n{ex.Message}", "Error");
+            }
+
             Application.Run(new Form1());
         }
     }
