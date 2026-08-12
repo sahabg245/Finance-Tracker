@@ -10,7 +10,7 @@ namespace FinanceTracker
             ApplicationConfiguration.Initialize();
 
             // Test database connection
-            try
+           /* try
             {
                 var db = new SqlDataAccess(DataBaseConfig.ConnectionString);
                 var result = await db.LoadDataAsync<dynamic>("SELECT 1;");
@@ -19,9 +19,9 @@ namespace FinanceTracker
             catch (Exception ex)
             {
                 MessageBox.Show($" Connection Failed!\n\n{ex.Message}", "Error");
-            }
+            }*/
 
-            Application.Run(new Form1());
+            Application.Run(new Forms.Signup());
         }
     }
 }
