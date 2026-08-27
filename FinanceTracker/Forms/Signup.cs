@@ -14,7 +14,7 @@ using FinanceTrackerLibrary.Models;
 
 namespace FinanceTracker.Forms
 {
-    public partial class Signup : Form
+    public partial class Signup : BaseForm
     {
         private readonly AuthLogic _authLogic;
         private readonly UserData _userData;
@@ -103,7 +103,7 @@ namespace FinanceTracker.Forms
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (password !=confirmPassword)
+            if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -135,6 +135,11 @@ namespace FinanceTracker.Forms
                 MessageBox.Show($"An error occurred during registration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+        }
+
+        private void txtUsername_TextChanged_1(object sender, EventArgs e)
+        {
 
         }
     }

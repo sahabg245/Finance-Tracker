@@ -241,6 +241,7 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login Form";
+            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

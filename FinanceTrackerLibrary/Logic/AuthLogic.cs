@@ -62,5 +62,40 @@ namespace FinanceTrackerLibrary.Logic
                 }
             }
         }
+
+        public async Task <bool> UpdatePassword(int userId, string currPassword, string newPassword)
+        {
+            var user = await _userData.GetUserById(userId);
+            if (user == null)
+            {
+                return false;
+            }
+            bool isCurrentValid = BCrypt.Net.BCrypt.Verify(currPassword, user.PasswordHash);
+
+            if (isCurrentValid)
+            {
+                string newHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                await _userData.UpdatePassword(userId, newHash);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public async Task <bool> UpdateName(int userId, string newName)
+        {
+            if (string.IsNullOrEmpty(newName))
+            {
+                return false;
+            }
+            else
+            {
+                await _userData.UpdateFullname(userId, newName);
+                return true;
+            }
+        }
     }
 }
