@@ -14,7 +14,7 @@ using FinanceTrackerLibrary.DataAccess;
 
 namespace FinanceTracker.Forms
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : BaseForm
     {
 
         private readonly AuthLogic _authLogic;
@@ -57,52 +57,56 @@ namespace FinanceTracker.Forms
 
         private async void registerButton_Click(object sender, EventArgs e)
         {
-                string email = txtEmail.Text.Trim();
-                string password = txtPassword.Text;
+            string email = txtEmail.Text.Trim();
+            string password = txtPassword.Text;
 
 
-                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-                {
-                    MessageBox.Show("Please enter both email and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                try
-                {
-                    User user = await _authLogic.Login(email, password);
-
-                    if (user != null)
-                    {
-                        UserSession.CurrentUser = user;
-                        this.Hide();
-                        Dashboard dashboardForm = new Dashboard();
-                        dashboardForm.Show();
-
-                        InactivityTimer.Start(() =>
-                        {
-                            UserSession.Logout();
-
-                            if (this.IsHandleCreated)
-                            {
-                                this.Invoke(() =>
-                                {
-                                    LoginForm loginForm = new LoginForm();
-                                    loginForm.Show();
-                                });
-                            }
-                        });
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid email or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter both email and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-       
+            try
+            {
+                User user = await _authLogic.Login(email, password);
+
+                if (user != null)
+                {
+                    UserSession.CurrentUser = user;
+                    this.Hide();
+                    Dashboard dashboardForm = new Dashboard();
+                    dashboardForm.Show();
+
+                    InactivityTimer.Start(() =>
+                    {
+                        UserSession.Logout();
+
+                        if (this.IsHandleCreated)
+                        {
+                            this.Invoke(() =>
+                            {
+                                LoginForm loginForm = new LoginForm();
+                                loginForm.Show();
+                            });
+                        }
+                    });
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -202,6 +202,7 @@
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtUsername.Size = new Size(390, 54);
             txtUsername.TabIndex = 15;
+            txtUsername.TextChanged += txtUsername_TextChanged_1;
             // 
             // txtEmail
             // 
