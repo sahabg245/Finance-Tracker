@@ -27,6 +27,10 @@ namespace FinanceTrackerLibrary.DataAccess
         {
             string sql = "select * from Users where Email=@Email";
             var result = await _dbString.LoadDataAsync<User>(sql, new { Email = email });
+            if (result == null || !result.Any())
+            {
+                return null;
+            }
             return result.FirstOrDefault();
         }
     }

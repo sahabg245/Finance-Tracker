@@ -1,4 +1,6 @@
 using FinanceTrackerLibrary.DataAccess;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
 
 namespace FinanceTracker
 {
@@ -9,17 +11,11 @@ namespace FinanceTracker
         {
             ApplicationConfiguration.Initialize();
 
-            // Test database connection
-           /* try
-            {
-                var db = new SqlDataAccess(DataBaseConfig.ConnectionString);
-                var result = await db.LoadDataAsync<dynamic>("SELECT 1;");
-                MessageBox.Show("Database Connected Successfully!", "Success");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($" Connection Failed!\n\n{ex.Message}", "Error");
-            }*/
+            LiveCharts.Configure(configuration => 
+            configuration.AddSkiaSharp()
+                .AddDefaultMappers()
+                .AddLightTheme()
+                );
 
             Application.Run(new Forms.Signup());
         }

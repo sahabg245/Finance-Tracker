@@ -19,7 +19,6 @@ namespace FinanceTracker.Forms
         {
             base.OnLoad(e);
             InactivityTimer.Reset();
-
         }
     }
 }
