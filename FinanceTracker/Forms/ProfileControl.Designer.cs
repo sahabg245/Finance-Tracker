@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -41,46 +43,51 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            profilePanel = new Guna.UI2.WinForms.Guna2Panel();
             infoDisplayPanel = new Guna.UI2.WinForms.Guna2Panel();
             changePhotoButton = new Guna.UI2.WinForms.Guna2Button();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             userEmailDisplay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             userNameDisplay = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtChangeUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtCurrentPass = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            warningLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            saveChanges = new Guna.UI2.WinForms.Guna2Button();
             txtNewPass = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            saveChanges = new Guna.UI2.WinForms.Guna2Button();
-            warningLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtCurrentPass = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtChangeUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            profilePanel.SuspendLayout();
             infoDisplayPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // guna2HtmlLabel1
+            // profilePanel
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = SystemColors.Window;
-            guna2HtmlLabel1.Location = new Point(38, 33);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(224, 33);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Profile Information";
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.ForeColor = SystemColors.Window;
-            guna2HtmlLabel2.Location = new Point(38, 72);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(360, 25);
-            guna2HtmlLabel2.TabIndex = 1;
-            guna2HtmlLabel2.Text = "Update your personal details and account info.";
+            profilePanel.AutoScroll = true;
+            profilePanel.BorderColor = Color.DarkOrange;
+            profilePanel.BorderRadius = 10;
+            profilePanel.BorderThickness = 2;
+            profilePanel.Controls.Add(infoDisplayPanel);
+            profilePanel.Controls.Add(guna2HtmlLabel2);
+            profilePanel.Controls.Add(guna2HtmlLabel1);
+            profilePanel.Controls.Add(warningLabel);
+            profilePanel.Controls.Add(saveChanges);
+            profilePanel.Controls.Add(txtNewPass);
+            profilePanel.Controls.Add(guna2HtmlLabel5);
+            profilePanel.Controls.Add(txtCurrentPass);
+            profilePanel.Controls.Add(guna2HtmlLabel4);
+            profilePanel.Controls.Add(txtChangeUsername);
+            profilePanel.Controls.Add(guna2HtmlLabel3);
+            profilePanel.CustomizableEdges = customizableEdges14;
+            profilePanel.Dock = DockStyle.Fill;
+            profilePanel.Location = new Point(0, 0);
+            profilePanel.Name = "profilePanel";
+            profilePanel.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            profilePanel.Size = new Size(670, 803);
+            profilePanel.TabIndex = 0;
             // 
             // infoDisplayPanel
             // 
@@ -93,11 +100,11 @@
             infoDisplayPanel.Controls.Add(userEmailDisplay);
             infoDisplayPanel.Controls.Add(userNameDisplay);
             infoDisplayPanel.CustomizableEdges = customizableEdges4;
-            infoDisplayPanel.Location = new Point(38, 123);
+            infoDisplayPanel.Location = new Point(41, 114);
             infoDisplayPanel.Name = "infoDisplayPanel";
             infoDisplayPanel.ShadowDecoration.CustomizableEdges = customizableEdges5;
             infoDisplayPanel.Size = new Size(589, 162);
-            infoDisplayPanel.TabIndex = 2;
+            infoDisplayPanel.TabIndex = 14;
             // 
             // changePhotoButton
             // 
@@ -110,12 +117,12 @@
             changePhotoButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             changePhotoButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             changePhotoButton.FillColor = Color.FromArgb(14, 26, 53);
-            changePhotoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            changePhotoButton.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             changePhotoButton.ForeColor = Color.Silver;
             changePhotoButton.Location = new Point(161, 94);
             changePhotoButton.Name = "changePhotoButton";
             changePhotoButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            changePhotoButton.Size = new Size(148, 44);
+            changePhotoButton.Size = new Size(148, 48);
             changePhotoButton.TabIndex = 3;
             changePhotoButton.Text = "Change Photo";
             // 
@@ -151,86 +158,66 @@
             userNameDisplay.Size = new Size(94, 27);
             userNameDisplay.TabIndex = 0;
             userNameDisplay.Text = "user name";
-            userNameDisplay.Click += userNameDisplay_Click;
             // 
-            // guna2HtmlLabel3
+            // guna2HtmlLabel2
             // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.ForeColor = SystemColors.Window;
-            guna2HtmlLabel3.Location = new Point(38, 322);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(94, 25);
-            guna2HtmlLabel3.TabIndex = 3;
-            guna2HtmlLabel3.Text = "FULL NAME";
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = SystemColors.Window;
+            guna2HtmlLabel2.Location = new Point(41, 63);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(360, 25);
+            guna2HtmlLabel2.TabIndex = 13;
+            guna2HtmlLabel2.Text = "Update your personal details and account info.";
             // 
-            // txtChangeUsername
+            // guna2HtmlLabel1
             // 
-            txtChangeUsername.BorderColor = Color.DarkOrange;
-            txtChangeUsername.BorderRadius = 10;
-            txtChangeUsername.BorderThickness = 2;
-            txtChangeUsername.CustomizableEdges = customizableEdges6;
-            txtChangeUsername.DefaultText = "";
-            txtChangeUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtChangeUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtChangeUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtChangeUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtChangeUsername.FillColor = Color.FromArgb(14, 26, 80);
-            txtChangeUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtChangeUsername.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtChangeUsername.ForeColor = SystemColors.Window;
-            txtChangeUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtChangeUsername.Location = new Point(38, 355);
-            txtChangeUsername.Margin = new Padding(4, 5, 4, 5);
-            txtChangeUsername.Name = "txtChangeUsername";
-            txtChangeUsername.PlaceholderText = "";
-            txtChangeUsername.SelectedText = "";
-            txtChangeUsername.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            txtChangeUsername.Size = new Size(584, 58);
-            txtChangeUsername.TabIndex = 4;
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = SystemColors.Window;
+            guna2HtmlLabel1.Location = new Point(41, 24);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(224, 33);
+            guna2HtmlLabel1.TabIndex = 12;
+            guna2HtmlLabel1.Text = "Profile Information";
             // 
-            // guna2HtmlLabel4
+            // warningLabel
             // 
-            guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel4.ForeColor = SystemColors.Window;
-            guna2HtmlLabel4.Location = new Point(38, 471);
-            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(175, 25);
-            guna2HtmlLabel4.TabIndex = 6;
-            guna2HtmlLabel4.Text = "CURRENT PASSWORD";
+            warningLabel.BackColor = Color.Transparent;
+            warningLabel.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            warningLabel.ForeColor = Color.Tomato;
+            warningLabel.Location = new Point(41, 561);
+            warningLabel.Name = "warningLabel";
+            warningLabel.Size = new Size(160, 25);
+            warningLabel.TabIndex = 22;
+            warningLabel.Text = "yahan pr ho ga text";
             // 
-            // txtCurrentPass
+            // saveChanges
             // 
-            txtCurrentPass.BorderColor = Color.DarkOrange;
-            txtCurrentPass.BorderRadius = 10;
-            txtCurrentPass.BorderThickness = 2;
-            txtCurrentPass.CustomizableEdges = customizableEdges8;
-            txtCurrentPass.DefaultText = "";
-            txtCurrentPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtCurrentPass.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtCurrentPass.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtCurrentPass.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtCurrentPass.FillColor = Color.FromArgb(14, 26, 80);
-            txtCurrentPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCurrentPass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCurrentPass.ForeColor = SystemColors.Window;
-            txtCurrentPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCurrentPass.Location = new Point(38, 504);
-            txtCurrentPass.Margin = new Padding(4, 5, 4, 5);
-            txtCurrentPass.Name = "txtCurrentPass";
-            txtCurrentPass.PlaceholderText = "";
-            txtCurrentPass.SelectedText = "";
-            txtCurrentPass.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            txtCurrentPass.Size = new Size(584, 58);
-            txtCurrentPass.TabIndex = 7;
+            saveChanges.BorderColor = Color.DarkOrange;
+            saveChanges.BorderRadius = 10;
+            saveChanges.BorderThickness = 2;
+            saveChanges.CustomizableEdges = customizableEdges6;
+            saveChanges.DisabledState.BorderColor = Color.DarkGray;
+            saveChanges.DisabledState.CustomBorderColor = Color.DarkGray;
+            saveChanges.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            saveChanges.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            saveChanges.FillColor = Color.FromArgb(14, 26, 53);
+            saveChanges.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            saveChanges.ForeColor = Color.Silver;
+            saveChanges.Location = new Point(482, 729);
+            saveChanges.Name = "saveChanges";
+            saveChanges.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            saveChanges.Size = new Size(148, 49);
+            saveChanges.TabIndex = 21;
+            saveChanges.Text = "Save Changes";
             // 
             // txtNewPass
             // 
             txtNewPass.BorderColor = Color.DarkOrange;
             txtNewPass.BorderRadius = 10;
             txtNewPass.BorderThickness = 2;
-            txtNewPass.CustomizableEdges = customizableEdges10;
+            txtNewPass.CustomizableEdges = customizableEdges8;
             txtNewPass.DefaultText = "";
             txtNewPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNewPass.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -241,101 +228,134 @@
             txtNewPass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNewPass.ForeColor = SystemColors.Window;
             txtNewPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNewPass.Location = new Point(38, 653);
+            txtNewPass.Location = new Point(41, 644);
             txtNewPass.Margin = new Padding(4, 5, 4, 5);
             txtNewPass.Name = "txtNewPass";
             txtNewPass.PlaceholderText = "";
             txtNewPass.SelectedText = "";
-            txtNewPass.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            txtNewPass.ShadowDecoration.CustomizableEdges = customizableEdges9;
             txtNewPass.Size = new Size(589, 58);
-            txtNewPass.TabIndex = 9;
+            txtNewPass.TabIndex = 20;
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel5.ForeColor = SystemColors.Window;
-            guna2HtmlLabel5.Location = new Point(38, 620);
+            guna2HtmlLabel5.Location = new Point(41, 611);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(137, 25);
-            guna2HtmlLabel5.TabIndex = 8;
+            guna2HtmlLabel5.TabIndex = 19;
             guna2HtmlLabel5.Text = "NEW PASSWORD";
             // 
-            // saveChanges
+            // txtCurrentPass
             // 
-            saveChanges.BorderColor = Color.DarkOrange;
-            saveChanges.BorderRadius = 10;
-            saveChanges.BorderThickness = 2;
-            saveChanges.CustomizableEdges = customizableEdges12;
-            saveChanges.DisabledState.BorderColor = Color.DarkGray;
-            saveChanges.DisabledState.CustomBorderColor = Color.DarkGray;
-            saveChanges.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            saveChanges.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            saveChanges.FillColor = Color.FromArgb(14, 26, 53);
-            saveChanges.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            saveChanges.ForeColor = Color.Silver;
-            saveChanges.Location = new Point(479, 738);
-            saveChanges.Name = "saveChanges";
-            saveChanges.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            saveChanges.Size = new Size(148, 44);
-            saveChanges.TabIndex = 10;
-            saveChanges.Text = "Save Changes";
-            saveChanges.Click += saveChanges_Click;
+            txtCurrentPass.BorderColor = Color.DarkOrange;
+            txtCurrentPass.BorderRadius = 10;
+            txtCurrentPass.BorderThickness = 2;
+            txtCurrentPass.CustomizableEdges = customizableEdges10;
+            txtCurrentPass.DefaultText = "";
+            txtCurrentPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCurrentPass.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCurrentPass.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCurrentPass.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCurrentPass.FillColor = Color.FromArgb(14, 26, 80);
+            txtCurrentPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCurrentPass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtCurrentPass.ForeColor = SystemColors.Window;
+            txtCurrentPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCurrentPass.Location = new Point(41, 495);
+            txtCurrentPass.Margin = new Padding(4, 5, 4, 5);
+            txtCurrentPass.Name = "txtCurrentPass";
+            txtCurrentPass.PlaceholderText = "";
+            txtCurrentPass.SelectedText = "";
+            txtCurrentPass.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            txtCurrentPass.Size = new Size(584, 58);
+            txtCurrentPass.TabIndex = 18;
             // 
-            // warningLabel
+            // guna2HtmlLabel4
             // 
-            warningLabel.BackColor = Color.Transparent;
-            warningLabel.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            warningLabel.ForeColor = Color.Tomato;
-            warningLabel.Location = new Point(38, 570);
-            warningLabel.Name = "warningLabel";
-            warningLabel.Size = new Size(160, 25);
-            warningLabel.TabIndex = 11;
-            warningLabel.Text = "yahan pr ho ga text";
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel4.ForeColor = SystemColors.Window;
+            guna2HtmlLabel4.Location = new Point(41, 462);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(175, 25);
+            guna2HtmlLabel4.TabIndex = 17;
+            guna2HtmlLabel4.Text = "CURRENT PASSWORD";
+            // 
+            // txtChangeUsername
+            // 
+            txtChangeUsername.BorderColor = Color.DarkOrange;
+            txtChangeUsername.BorderRadius = 10;
+            txtChangeUsername.BorderThickness = 2;
+            txtChangeUsername.CustomizableEdges = customizableEdges12;
+            txtChangeUsername.DefaultText = "";
+            txtChangeUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtChangeUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtChangeUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtChangeUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtChangeUsername.FillColor = Color.FromArgb(14, 26, 80);
+            txtChangeUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtChangeUsername.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtChangeUsername.ForeColor = SystemColors.Window;
+            txtChangeUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtChangeUsername.Location = new Point(41, 346);
+            txtChangeUsername.Margin = new Padding(4, 5, 4, 5);
+            txtChangeUsername.Name = "txtChangeUsername";
+            txtChangeUsername.PlaceholderText = "";
+            txtChangeUsername.SelectedText = "";
+            txtChangeUsername.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            txtChangeUsername.Size = new Size(584, 58);
+            txtChangeUsername.TabIndex = 16;
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.ForeColor = SystemColors.Window;
+            guna2HtmlLabel3.Location = new Point(41, 313);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(94, 25);
+            guna2HtmlLabel3.TabIndex = 15;
+            guna2HtmlLabel3.Text = "FULL NAME";
             // 
             // ProfileControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.FromArgb(14, 26, 53);
-            Controls.Add(warningLabel);
-            Controls.Add(saveChanges);
-            Controls.Add(txtNewPass);
-            Controls.Add(guna2HtmlLabel5);
-            Controls.Add(txtCurrentPass);
-            Controls.Add(guna2HtmlLabel4);
-            Controls.Add(txtChangeUsername);
-            Controls.Add(guna2HtmlLabel3);
-            Controls.Add(infoDisplayPanel);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(profilePanel);
             ForeColor = SystemColors.Window;
             Name = "ProfileControl";
             Size = new Size(670, 803);
             Load += ProfileControl_Load;
+            profilePanel.ResumeLayout(false);
+            profilePanel.PerformLayout();
             infoDisplayPanel.ResumeLayout(false);
             infoDisplayPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Panel profilePanel;
         private Guna.UI2.WinForms.Guna2Panel infoDisplayPanel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel userNameDisplay;
+        private Guna.UI2.WinForms.Guna2Button changePhotoButton;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel userEmailDisplay;
-        private Guna.UI2.WinForms.Guna2Button changePhotoButton;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtChangeUsername;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtCurrentPass;
+        private Guna.UI2.WinForms.Guna2HtmlLabel userNameDisplay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel warningLabel;
+        private Guna.UI2.WinForms.Guna2Button saveChanges;
         private Guna.UI2.WinForms.Guna2TextBox txtNewPass;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2Button saveChanges;
-        private Guna.UI2.WinForms.Guna2HtmlLabel warningLabel;
+        private Guna.UI2.WinForms.Guna2TextBox txtCurrentPass;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox txtChangeUsername;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }

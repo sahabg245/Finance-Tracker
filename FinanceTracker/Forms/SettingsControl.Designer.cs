@@ -65,9 +65,8 @@
             // 
             // containerPanel
             // 
-            containerPanel.BorderColor = Color.DarkOrange;
-            containerPanel.BorderRadius = 10;
-            containerPanel.BorderThickness = 2;
+            containerPanel.AutoScroll = true;
+            containerPanel.BorderColor = Color.Silver;
             containerPanel.CustomizableEdges = customizableEdges1;
             containerPanel.FillColor = Color.Transparent;
             containerPanel.ForeColor = SystemColors.Window;
@@ -130,7 +129,7 @@
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
             Name = "SettingsControl";
-            Size = new Size(1097, 898);
+            Size = new Size(1097, 879);
             Load += SettingsControl_Load;
             ResumeLayout(false);
             PerformLayout();

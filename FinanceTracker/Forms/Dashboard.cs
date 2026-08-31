@@ -162,17 +162,7 @@ namespace FinanceTracker.Forms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (UserSession.CurrentUser != null)
-            {
-                UserSession.Logout();
-                this.Close();
-                LoginForm loginForm = new LoginForm();
-                loginForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("No user is currently logged in.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+           
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -198,5 +188,19 @@ namespace FinanceTracker.Forms
             dashboard.Show();*/
         }
 
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            if (UserSession.CurrentUser != null)
+            {
+                UserSession.Logout();
+                this.Close();
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("No user is currently logged in.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

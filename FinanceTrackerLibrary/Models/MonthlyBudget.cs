@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinanceTrackerLibrary.Models
 {
-    public class Budget
+    public class MonthlyBudget
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-        public string Category { get; set; }
-        public decimal OverallMonthlyBudget { get; set; }
-        public decimal CategoryLimit { get; set; }
+        public decimal TotalBudget { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }
     }
