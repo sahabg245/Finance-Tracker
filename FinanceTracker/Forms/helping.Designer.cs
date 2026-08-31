@@ -35,7 +35,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1191, 706);
+            ClientSize = new Size(1191, 1053);
             Name = "helping";
             Text = "helping";
             Load += helping_Load;
